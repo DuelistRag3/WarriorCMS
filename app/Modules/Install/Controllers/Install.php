@@ -9,6 +9,6 @@ namespace Modules\Install\Controllers;
 class Install extends \CodeIgniter\Controller
 {
     public function index() {
-        echo "Install";
+        echo view('Modules\Install\Views\install');
     }
 }
