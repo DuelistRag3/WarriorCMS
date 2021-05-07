@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Glacial Indefferences';
+  src: url('GlacialIndifference-Regular.woff2');
+}
+
+@font-face {
+  font-family: 'LifeCraft';
+  src: url('LifeCraft_Font.ttf');
+}
+
+html {
+  background-image: url("../img/mbg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+    font-family: 'LifeCraft';
+    letter-spacing: 3px;
+}
+
+.desc {
+  font-family: 'Glacial Indefferences'
+}
+
+.container {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 25vh;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #404040
+}
+
+.row {
+  text-align: center;
+  color: white;
+}
+
+hr {
+  border-top: 1px solid white;
+  border-radius: 2px;
+}
+
+.btn {
+  background-color: #0066ff;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Glacial Indefferences';
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
