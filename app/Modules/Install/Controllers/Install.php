@@ -20,7 +20,7 @@ class Install extends \CodeIgniter\Controller
         'version' => '0.1',
       ];
 
-      echo view('Modules\Install\Views\start', $data);
+      echo view('Modules\Install\Views\install', $data);
     }
 
     public function database() {

@@ -63,6 +63,8 @@ hr {
   font-family: 'Glacial Indefferences';
   font-size: 20px;
   border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .btn:hover {

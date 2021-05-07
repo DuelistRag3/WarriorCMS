@@ -15,7 +15,7 @@
              In the next steps you will install the CMS, it´s requiered you have already setuped your WoW Server <br />
              and created an empty database for the CMS
            </p>
-          <a class="btn" href="install/database">Start</a>
+          <button class="btn">Start</button>
         </div>
       </div>
     </div>
