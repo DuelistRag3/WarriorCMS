@@ -10,7 +10,7 @@
         <div class="row">
           <div class="col">
             <div class="head">
-              <h1>Installation</h1>
+              <h1 class="lc">Installation</h1>
             </div>
             <p class="gi">
                Welcome to the WarriorCMS version <?= $version ?> installation. <br />
@@ -26,12 +26,5 @@
 </html>
 
 <script>
-function changeSection(hide, show, hidedirect) {
-  var left = 'hide-pan-' + hidedirect;
-  var right = 'hide'
-  var showele = document.getElementById(show);
-  var hideele = document.getElementById(hide);
-  hideele.classList.add(direct);
-  showele.classList.remove(direct);
-}
+
 </script>

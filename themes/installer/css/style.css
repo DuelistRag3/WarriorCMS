@@ -74,6 +74,7 @@ h1 {
   cursor: pointer;
   text-decoration: none;
   margin-bottom: 10px;
+  outline:none;
 }
 
 .btn:hover {
