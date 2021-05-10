@@ -95,7 +95,7 @@ h1 {
 }
 
 .logo-container {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 0;
+  width: 100%!important;
+  text-align: center!important;
+  margin-bottom: 0!important;
 }
