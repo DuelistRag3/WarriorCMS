@@ -1,11 +1,19 @@
 @font-face {
   font-family: 'Glacial Indefferences';
-  src: url('GlacialIndifference-Regular.woff2');
+  src: url('../fonts/GlacialIndifference-Regular.woff2');
 }
 
 @font-face {
   font-family: 'LifeCraft';
-  src: url('LifeCraft_Font.ttf');
+  src: url('../fonts/LifeCraft_Font.ttf');
+}
+
+.lc {
+  font-family: 'LifeCraft'!important;
+}
+
+.gi {
+  font-family: 'Glacial Indifference'!important;
 }
 
 html {
@@ -24,14 +32,7 @@ body {
 h1 {
     font-family: 'LifeCraft';
     letter-spacing: 3px;
-}
-
-.hide-pan {
-      display: none!important;
-}
-
-.desc {
-  font-family: 'Glacial Indefferences'
+    margin: 0px;
 }
 
 .container {
@@ -40,21 +41,23 @@ h1 {
   margin-top: 25vh;
   border-style: solid;
   border-width: 2px;
-  border-radius: 5px;
-  padding: 10px;
   background-color: #404040;
   display: block;
-  transition-property: display 2s;
+}
+
+.head {
+  text-align: left;
+  padding-left: 10px;
+  border: 0px;
+  border-bottom: 1px;
+  border-style: solid;
+  border-color: black;
+  background-color: #333333;
 }
 
 .row {
   text-align: center;
   color: white;
-}
-
-hr {
-  border-top: 1px solid white;
-  border-radius: 2px;
 }
 
 .btn {
@@ -66,11 +69,11 @@ hr {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  font-family: 'Glacial Indefferences';
   font-size: 20px;
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
+  margin-bottom: 10px;
 }
 
 .btn:hover {
@@ -78,5 +81,11 @@ hr {
 }
 
 .inline {
-  display: inline;
+  display: inline!important;
+}
+
+.logo {
+  margin-top: 25vh;
+  margin-left: 47%;
+  margin-bottom: -10%;
 }
