@@ -22,6 +22,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -36,13 +37,9 @@ h1 {
 }
 
 .container {
-  margin-left: 25%;
-  margin-right: 25%;
   margin-top: 10vh;
-  border-style: solid;
-  border-width: 2px;
-  background-color: #404040;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 
 .head {
@@ -56,8 +53,19 @@ h1 {
 }
 
 .row {
+  position: absolute;
+  overflow: hidden!important;
   text-align: center;
   color: white;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  background-color: #404040;
+  transition: margin 1s;
+}
+
+.desc {
+  padding: 5px;
 }
 
 .btn {
@@ -81,17 +89,23 @@ h1 {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.inline {
-  display: inline!important;
-}
-
 .logo {
   margin: auto;
   width: 14%;
 }
 
-.hidden-panel {
-  display: none;
+.hidden-right {
+  overflow: hidden!important;
+  margin-right: -200%;
+}
+
+.hidden-left {
+  overflow: hidden!important;
+  margin-left: -200%;
+}
+
+.inner {
+
 }
 
 .logo-container {
