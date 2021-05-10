@@ -38,7 +38,7 @@ h1 {
 .container {
   margin-left: 25%;
   margin-right: 25%;
-  margin-top: 25vh;
+  margin-top: 10vh;
   border-style: solid;
   border-width: 2px;
   background-color: #404040;
@@ -86,7 +86,16 @@ h1 {
 }
 
 .logo {
-  margin-top: 25vh;
-  margin-left: 47%;
-  margin-bottom: -10%;
+  margin: auto;
+  width: 14%;
+}
+
+.hidden-panel {
+  display: none;
+}
+
+.logo-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0;
 }
