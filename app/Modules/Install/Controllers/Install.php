@@ -6,33 +6,77 @@
 
 namespace Modules\Install\Controllers;
 
+use App\Models\VersionModel;
 use Arifrh\Themes\Themes;
+use CodeIgniter\API\ResponseTrait;
+use App\Libraries\ConfigWriter;
+use Modules\Install\InstallModel;
 
 class Install extends \CodeIgniter\Controller
 {
+  use ResponseTrait;
     public function __construct() {
       helper('form');
+
+      // Theme injection
       $theme = config('installer');
       Themes::init($theme)
       ->addCSS('style.css')
       ->addExternalJS(['https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'])
       ->addExternalJS(['https://cdn.jsdelivr.net/npm/sweetalert2@10.16.7/dist/sweetalert2.all.min.js'])
+      ->addJS(['dataInputs.js'])
       ->addJS(['panelSlide.js']);
+      // End theme injection
+
+      // Import config writter for arrays
+      $this->ConfigWriter = new ConfigWriter();
+
+      $this->model = model('App\Modules\Install\Models\InstallModel');
+      $this->version = model('App\Models\VersionModel');
     }
 
     public function index() {
       $data = [
-        'version' => '0.1',
+        'version' => $this->version->getVersion(),
       ];
 
       echo view('Modules\Install\Views\install', $data);
     }
 
     public function saveSiteSettings() {
-      echo "TEST";
+      if (empty($_POST['sitename'])) {
+        $data = [
+          'title' => 'Error!',
+          'msg' => 'Please fill out website name.',
+          'icon' => 'error'
+        ];
+        return $this->response->setJSON($data);
+      } elseif (empty($_POST['discordid'])) {
+        $data = [
+          'title' => 'Error!',
+          'msg' => 'Please fill out Discord id.',
+          'icon' => 'error'
+        ];
+        return $this->response->setJSON($data);
+      } else {
+        $data = [
+          'title' => 'Success!',
+          'msg' => 'Website data has been Saved.',
+          'icon' => 'success'
+        ];
+        $this->model->writeConfig($_POST['sitename'], $_POST['discordid']);
+        return $this->response->setJSON($data);
+      }
     }
 
-    public function saveSiteDatabase($dbhost, $dbuser, $dbpw, $dbname) {
-
+    public function saveSiteDatabase() {
+      if (empty($_POST['dbhostname']) or empty($_POST['dbusername']) or empty($_POST['dbpassword']) or empty($_POST['dbname'])) {
+        $data = [
+          'title' => 'Error!',
+          'msg' => 'Please fill out all fields.',
+          'icon' => 'error'
+        ];
+        return $this->response->setJSON($data);
+      }
     }
 }

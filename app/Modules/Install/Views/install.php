@@ -31,10 +31,14 @@
             <div class="desc">
               <p class="hv">
                  Change settings for your website:<br />
+                </p>
                  <?= form_open('savesitesettings', array('id' => 'siteSettingsForm')) ?>
-                 <button class="btn" id="" onclick="">Save</button>
+                  <label class="hv" for="sitename">Website name:</label><br>
+                  <input type="input" id="sitename" name="sitename" value=""><br>
+                  <label for="discordid">Discord ID:</label><br>
+                  <input class="hv" type="input" id="discordid" name="discordid" value=""><br><br>
+                 <button class="btn" id="settingssubmit" onclick="">Save</button>
                  <?= form_close() ?>
-               </p>
               <button class="btn" id="" onclick="prev('genpan', 'startpan')">Prev</button>
               <button class="btn" id="" onclick="next('genpan', 'webdbpan')">Next</button>
             </div>
@@ -47,8 +51,19 @@
             </div>
             <div class="desc">
               <p class="hv">
-                 Test
-               </p>
+                 Enter Database credentials for your website Database:<br />
+                </p>
+                 <?= form_open('savesitedatabase', array('id' => 'siteDatabaseForm')) ?>
+                  <label class="hv" for="dbhostname">DB Hostname:</label><br>
+                  <input type="input" id="dbhostname" name="dbhostname" value=""><br>
+                  <label for="dbusername">DB Username:</label><br>
+                  <input class="hv" type="input" id="dbusername" name="dbusername" value=""><br>
+                  <label for="dbpassword">DB Password:</label><br>
+                  <input class="hv" type="input" id="dbpassword" name="dbpassword" value=""><br>
+                  <label for="dbname">DB Name:</label><br>
+                  <input class="hv" type="input" id="dbname" name="dbname" value=""><br>
+                 <button class="btn" id="databasesubmit" onclick="">Save</button>
+                 <?= form_close() ?>
                <button class="btn" id="" onclick="prev('webdbpan', 'genpan')">Prev</button>
               <button class="btn" id="" onclick="next('genpan', '')">Next</button>
             </div>
@@ -60,41 +75,3 @@
 
 <!-- Import JavaScripts -->
 <?php Arifrh\Themes\Themes::renderJS('installer'); ?>
-<script>
-
-$(function() {
-        $("#siteSettingsForm").on('submit', function(e) {
-            e.preventDefault();
-
-            var contactForm = $(this);
-
-            $.ajax({
-                url: contactForm.attr('action'),
-                type: 'post',
-                data: contactForm.serialize(),
-                success: function(response){
-                    console.log(response);
-                    if(response.status == 'success') {
-                      const Toast = Swal.mixin({
-                      toast: true,
-                      position: 'top-end',
-                      showConfirmButton: false,
-                      timer: 3000,
-                      timerProgressBar: true,
-                      didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                      }
-                      })
-
-                      Toast.fire({
-                      icon: 'success',
-                      title: 'Website Settings saved'
-                      })
-                    }
-                }
-            });
-        });
-    });
-
-</script>
