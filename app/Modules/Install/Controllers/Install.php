@@ -77,6 +77,19 @@ class Install extends \CodeIgniter\Controller
           'icon' => 'error'
         ];
         return $this->response->setJSON($data);
+      } else {
+        // Write DB Config
+  			// // write web db config
+  			$this->ConfigWriter->write('Database', 'hostname', $_POST['dbhostname'], 'default');
+  			$this->ConfigWriter->write('Database', 'username', $_POST['dbusername'], 'default');
+  			$this->ConfigWriter->write('Database', 'password', $_POST['dbpassword'], 'default');
+  			$this->ConfigWriter->write('Database', 'database', $_POST['dbname'], 'default');
+        $data = [
+          'title' => 'Success!',
+          'msg' => 'Web Database setup completed.',
+          'icon' => 'success'
+        ];
+        return $this->response->setJSON($data);
       }
     }
 }
