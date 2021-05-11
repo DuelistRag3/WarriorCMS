@@ -3,4 +3,4 @@
 /**
  * Define Install Routes
  */
-$routes->get('home', '\Modules\Home\Controllers\Home::index');
+$routes->get('home', '\Modules\Home\Controllers\Home::index',['filter' => 'install']);
