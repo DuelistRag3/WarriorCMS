@@ -17,7 +17,6 @@ class Install extends \CodeIgniter\Controller
       ->addCSS('style.css')
       ->addExternalJS(['https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'])
       ->addExternalJS(['https://cdn.jsdelivr.net/npm/sweetalert2@10.16.7/dist/sweetalert2.all.min.js'])
-      ->addJS(['dataInputs.js'])
       ->addJS(['panelSlide.js']);
     }
 
