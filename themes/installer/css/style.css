@@ -67,7 +67,7 @@ h1 {
   transition: margin 1s;
   width: 30%;
   max-height: 50%;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .desc {
