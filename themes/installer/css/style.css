@@ -40,7 +40,7 @@ h1 {
 }
 
 .container {
-  margin-top: 10vh;
+  margin-top: 1vh;
   display: flex;
   justify-content: center;
   height: 100%;
@@ -67,6 +67,7 @@ h1 {
   background-color: #404040;
   transition: margin 1s;
   width: 30%;
+  max-height: 100vh;
 }
 
 .desc {
