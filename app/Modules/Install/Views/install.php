@@ -65,7 +65,25 @@
                  <button class="btn" id="databasesubmit" onclick="">Save</button>
                  <?= form_close() ?>
                <button class="btn" id="" onclick="prev('webdbpan', 'genpan')">Prev</button>
-              <button class="btn" id="" onclick="next('genpan', '')">Next</button>
+              <button class="btn" id="" onclick="next('webdbpan', 'realmspan')">Next</button>
+            </div>
+          </div>
+        </div>
+        <div class="row hidden-right" id="realmspan">
+          <div class="col">
+            <div class="head">
+              <h1 class="lc">Realms</h1>
+            </div>
+            <div class="desc">
+              <p class="hv">
+                 In this section you will add you´r realms:<br />
+                </p>
+                <div id="realmlist">
+
+                </div>
+                 <button class="btn" id="addrealm" onclick="addrealm()">Add</button><br />
+               <button class="btn" id="" onclick="prev('realmspan', 'webdbpan')">Prev</button>
+              <button class="btn" id="" onclick="finish()">Finish</button>
             </div>
           </div>
         </div>
@@ -75,3 +93,14 @@
 
 <!-- Import JavaScripts -->
 <?php Arifrh\Themes\Themes::renderJS('installer'); ?>
+
+<script>
+function addrealm() {
+var tag = document.createElement("p");
+var text = document.createTextNode("Test");
+tag.appendChild(text);
+var element = document.getElementById("realmlist");
+element.appendChild(tag);
+}
+
+</script>

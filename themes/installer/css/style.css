@@ -58,7 +58,6 @@ h1 {
 
 .row {
   position: absolute;
-  overflow: hidden!important;
   text-align: center;
   color: white;
   border-color: black;
@@ -67,7 +66,8 @@ h1 {
   background-color: #404040;
   transition: margin 1s;
   width: 30%;
-  max-height: 100vh;
+  max-height: 50%;
+  overflow-y: scroll;
 }
 
 .desc {
@@ -129,4 +129,24 @@ input[type=input] {
 
 .swal2-container {
   border-width: 0px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

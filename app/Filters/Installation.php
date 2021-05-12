@@ -13,7 +13,7 @@ class Installation implements FilterInterface
         $config = config('Warrior');
         // If migration is not done redirect to install
         if ($config->installstatus == '%FALSE%')
-    			return redirect()->to('/install');
+    			return redirect()->to(BASEURL.'install');
     }
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
