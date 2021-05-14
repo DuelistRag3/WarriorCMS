@@ -26,7 +26,7 @@ class Warrior extends BaseConfig
   *
   * @var string
   **/
-	public $sitename = 'WarriorCMS';
+	public $sitename = '%SITENAME%';
 
   /**
   *
@@ -38,5 +38,5 @@ class Warrior extends BaseConfig
   *
   * @var string
   **/
-  public $discordid = '1';
+  public $discordid = '%DISCORDID%';
 }
