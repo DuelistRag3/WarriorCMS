@@ -9,8 +9,6 @@ $(function() {
                 type: 'post',
                 data: contactForm.serialize(),
                 success: function(data){
-                      console.log(data);
-                      console.log(data.title);
                         Swal.fire({
                         title: data['title'],
                         text: data['msg'],
@@ -32,8 +30,6 @@ $(function() {
                     type: 'post',
                     data: contactForm.serialize(),
                     success: function(data){
-                          console.log(data);
-                          console.log(data.title);
                             Swal.fire({
                             title: data['title'],
                             text: data['msg'],

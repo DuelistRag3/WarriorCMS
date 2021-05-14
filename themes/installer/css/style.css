@@ -66,7 +66,7 @@ h1 {
   background-color: #404040;
   transition: margin 1s;
   width: 30%;
-  max-height: 50%;
+  max-height: 75%;
   overflow-y: auto;
 }
 
@@ -110,10 +110,6 @@ h1 {
   margin-left: -200%;
 }
 
-.inner {
-
-}
-
 .logo-container {
   width: 100%!important;
   text-align: center!important;
@@ -125,6 +121,17 @@ input[type=input] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+}
+
+input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.realmlist {
+  margin-bottom: 5px;
 }
 
 .swal2-container {
@@ -149,4 +156,22 @@ input[type=input] {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #333333;
 }

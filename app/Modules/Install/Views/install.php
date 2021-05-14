@@ -59,7 +59,7 @@
                   <label for="dbusername">DB Username:</label><br>
                   <input class="hv" type="input" id="dbusername" name="dbusername" value=""><br>
                   <label for="dbpassword">DB Password:</label><br>
-                  <input class="hv" type="input" id="dbpassword" name="dbpassword" value=""><br>
+                  <input class="hv" type="password" id="dbpassword" name="dbpassword" value=""><br>
                   <label for="dbname">DB Name:</label><br>
                   <input class="hv" type="input" id="dbname" name="dbname" value=""><br>
                  <button class="btn" id="databasesubmit" onclick="">Save</button>
@@ -78,10 +78,14 @@
               <p class="hv">
                  In this section you will add you´r realms:<br />
                 </p>
-                <div id="realmlist">
-
-                </div>
-                 <button class="btn" id="addrealm" onclick="addrealm()">Add</button><br />
+                <table id="realmlist" class="realmlist">
+                  <tr>
+                    <th>Realm name</th>
+                    <th>Emulator</th>
+                    <th>Bnet support</th>
+                  </tr>
+                </table>
+                 <button class="btn" id="addrealm" onclick="addRealm()">Add</button><br />
                <button class="btn" id="" onclick="prev('realmspan', 'webdbpan')">Prev</button>
               <button class="btn" id="" onclick="finish()">Finish</button>
             </div>
@@ -93,14 +97,3 @@
 
 <!-- Import JavaScripts -->
 <?php Arifrh\Themes\Themes::renderJS('installer'); ?>
-
-<script>
-function addrealm() {
-var tag = document.createElement("p");
-var text = document.createTextNode("Test");
-tag.appendChild(text);
-var element = document.getElementById("realmlist");
-element.appendChild(tag);
-}
-
-</script>

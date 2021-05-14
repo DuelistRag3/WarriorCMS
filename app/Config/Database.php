@@ -32,10 +32,10 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => '%WEBDBHOST%',
-		'username' => '%WEBDBUSER%',
-		'password' => '%WEBDBPASS%',
-		'database' => '%WEBDBBASE%',
+		'hostname' => 'localhost',
+		'username' => 'admin',
+		'password' => 'EkenIGHXs4eq3w4E7Ebo',
+		'database' => 'warriorcms',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
