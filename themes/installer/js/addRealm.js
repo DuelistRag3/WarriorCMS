@@ -31,6 +31,7 @@ function addRealm() {
     })
 
     if (formValues) {
+      var i = 0;
       var table = document.getElementById('realmlist');
       var row = table.insertRow();
       var cell1 = row.insertCell(0);
