@@ -87,7 +87,7 @@
                 </table>
                  <button class="btn" id="addrealm" onclick="addRealm()">Add</button><br />
                <button class="btn" id="" onclick="prev('realmspan', 'webdbpan')">Prev</button>
-              <button class="btn" id="" onclick="finish()">Finish</button>
+              <button class="btn" id="" onclick="finishInstall()">Finish</button>
             </div>
           </div>
         </div>

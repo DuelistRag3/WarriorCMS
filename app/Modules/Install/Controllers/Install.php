@@ -27,6 +27,7 @@ class Install extends \CodeIgniter\Controller
       ->addExternalJS(['https://cdn.jsdelivr.net/npm/sweetalert2@10.16.7/dist/sweetalert2.all.min.js'])
       ->addJS(['dataInputs.js'])
       ->addJS(['addRealm.js'])
+      ->addJS(['finishInstall.js'])
       ->addJS(['panelSlide.js']);
       // End theme injection
 
@@ -131,5 +132,13 @@ class Install extends \CodeIgniter\Controller
       $builder = $db->table('realms');
       $builder->insert($data);
 
+    }
+
+    public function finishInstall() {
+      if ($this->model->changeInstallStatus()) {
+        return $response_array['status'] = 'success';
+      } else {
+        return false;
+      }
     }
 }

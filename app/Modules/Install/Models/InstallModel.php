@@ -49,5 +49,4 @@ class InstallModel extends Model
         return false;
     }
   }
-
 }
