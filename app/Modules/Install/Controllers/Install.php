@@ -73,7 +73,6 @@ class Install extends \CodeIgniter\Controller
     }
 
     public function saveSiteDatabase() {
-      $migrate = \Config\Services::migrations();
       if (empty($_POST['dbhostname']) or empty($_POST['dbusername']) or empty($_POST['dbpassword']) or empty($_POST['dbname'])) {
         $data = [
           'title' => 'Error!',
@@ -89,26 +88,37 @@ class Install extends \CodeIgniter\Controller
   			$this->ConfigWriter->write('Database', 'password', $_POST['dbpassword'], 'default');
   			$this->ConfigWriter->write('Database', 'database', $_POST['dbname'], 'default');
 
-        try
-        {
-          $migrate->latest();
-          $data = [
-            'title' => 'Success!',
-            'msg' => 'Database setup completed.',
-            'icon' => 'success'
-          ];
-        }
-        catch (\Throwable $e)
-        {
-          $data = [
-            'title' => 'Error!',
-            'msg' => 'Something went wrong while Database setup',
-            'icon' => 'error'
-          ];
-        }
+        $data = [
+          'title' => 'Success!',
+          'msg' => 'Database successfully written.',
+          'icon' => 'success'
+        ];
 
         return $this->response->setJSON($data);
       }
+    }
+
+    public function migrateDatabase() {
+      $migrate = \Config\Services::migrations();
+      try
+      {
+        $migrate->latest();
+        $data = [
+          'title' => 'Success!',
+          'msg' => 'Database setup complete, please proceed to the next step.',
+          'icon' => 'success'
+        ];
+      }
+      catch (\Throwable $e)
+      {
+        $data = [
+          'title' => 'Error!',
+          'msg' => $e->getMessage(),
+          'icon' => 'error'
+        ];
+      }
+
+      return $this->response->setJSON($data);
     }
 
     public function addRealmDB() {
@@ -123,7 +133,7 @@ class Install extends \CodeIgniter\Controller
         'dbuser' => $_POST['rdbuser'],
         'dbpass' => $_POST['rdbpass'],
         'dbauth' => $_POST['rdbname'],
-        'dbchars' => $_POST['rdbchars']
+        'dbchars' => $_POST['rdbchars'],
         'emulator' => $_POST['remutype'],
         'bnetsup'  => $_POST['rbnetsup'],
       ];

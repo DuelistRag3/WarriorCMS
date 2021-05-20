@@ -8,3 +8,4 @@ $routes->post('savesitesettings', '\Modules\Install\Controllers\Install::saveSit
 $routes->post('savesitedatabase', '\Modules\Install\Controllers\Install::saveSiteDatabase');
 $routes->post('addrealmdb', '\Modules\Install\Controllers\Install::addRealmDB');
 $routes->post('finishinstall', '\Modules\Install\Controllers\Install::finishInstall');
+$routes->post('migratedb', '\Modules\Install\Controllers\Install::migrateDatabase');
