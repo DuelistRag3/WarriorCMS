@@ -116,15 +116,14 @@ class Install extends \CodeIgniter\Controller
 
       $model = new GeneralModel();
 
-      $dbpasshash = $model->hashing($_POST['rdbuser'], $_POST['rdbpass'], 'db');
-
       $data = [
         'name' => $_POST['rname'],
         'portal' => $_POST['rportal'],
         'dbhost' => $_POST['rdbhost'],
         'dbuser' => $_POST['rdbuser'],
-        'dbpass' => $dbpasshash,
-        'dbname' => $_POST['rdbname'],
+        'dbpass' => $_POST['rdbpass'],
+        'dbauth' => $_POST['rdbname'],
+        'dbchars' => $_POST['rdbchars']
         'emulator' => $_POST['remutype'],
         'bnetsup'  => $_POST['rbnetsup'],
       ];
