@@ -132,8 +132,8 @@ class Install extends \CodeIgniter\Controller
         'dbhost' => $_POST['rdbhost'],
         'dbuser' => $_POST['rdbuser'],
         'dbpass' => $_POST['rdbpass'],
-        'dbauth' => $_POST['rdbname'],
-        'dbchars' => $_POST['rdbchars'],
+        'dbauthname' => $_POST['rdbauthname'],
+        'dbcharname' => $_POST['rdbcharname'],
         'emulator' => $_POST['remutype'],
         'bnetsup'  => $_POST['rbnetsup'],
       ];

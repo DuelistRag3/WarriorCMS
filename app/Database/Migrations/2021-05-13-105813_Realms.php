@@ -32,11 +32,15 @@ class Realms extends Migration
 				'type'						=> 'VARCHAR',
 				'constraint'			=> 25,
 			],
-			'dbpass'		=> [ // Will be hashed with password_hash function with dbuser and dbpass
+			'dbpass'		=> [
 				'type'						=> 'VARCHAR',
 				'constraint'			=> 255,
 			],
-			'dbname'		=> [ // Never use db name to hash duo security reasons (visable publicy)
+			'dbauthname'		=> [
+				'type'						=> 'VARCHAR',
+				'constraint'			=> 25,
+			],
+			'dbcharname'		=> [
 				'type'						=> 'VARCHAR',
 				'constraint'			=> 25,
 			],
