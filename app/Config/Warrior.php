@@ -15,7 +15,7 @@ class Warrior extends BaseConfig
   * DO NOT TOUCH IT IF YOU DON`T KNOW WHAT YOU DO.
   * @var string
   **/
-	public $installstatus = '%FALSE%';
+	public $installstatus = 'true';
 
   /**
   *
@@ -26,7 +26,7 @@ class Warrior extends BaseConfig
   *
   * @var string
   **/
-	public $sitename = '%SITENAME%';
+	public $sitename = 'WarriorCMS';
 
   /**
   *
@@ -38,5 +38,5 @@ class Warrior extends BaseConfig
   *
   * @var string
   **/
-  public $discordid = '%DISCORDID%';
+  public $discordid = 'DASKD';
 }
