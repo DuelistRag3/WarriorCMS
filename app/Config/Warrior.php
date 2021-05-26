@@ -26,7 +26,7 @@ class Warrior extends BaseConfig
   *
   * @var string
   **/
-	public $sitename = '%SITENAME%'';
+	public $sitename = '%SITENAME%';
 
   /**
   *
