@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'LifeCraft';
+    src: url('app/Modules/Home/Assets/fonts/LifeCraft_Font.ttf');
+  }
+
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-size: 66.6%;
+    --color-bg-main: gray;
+    --color-text-main: white;
+    --color-border: lightblue;
+    color: red;
+    font-family: 'Lifecraft';
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: lightgray;
+}
+
+body a {
+    text-decoration: none;
+}
+
+ /* HEADER  */
+
+ .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-bg-main);
+
+    border-bottom: solid 3px var(--color-border);
+}
+
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: var(--color-text-main);
+    font-family: LifeCraft;
+
+    font-size: 2rem;
+}
+
+.nav-list li {
+    padding: 1rem 2rem 1rem 2rem;
+    
+}
+
+/* BODY */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.body-container {
+
+    color: gold;
+    text-align: center;
+}
+
+
+
+
+/* FOOTER */
+
+.footer-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);;
+}
+
+ 
+
+
+
+ 

@@ -9,6 +9,6 @@ namespace Modules\Home\Controllers;
 class Home extends \CodeIgniter\Controller
 {
     public function index() {
-        echo "Home";
+        echo view('Modules\Home\Views\home');
     }
 }
