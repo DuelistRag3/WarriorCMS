@@ -8,3 +8,22 @@
 | DuelistRage | Active |
 | XàXà | Active |
 | TheKingPhantom | Active |
+
+### Table of contents
+
+[Features](#Features)
+
+### Features
+
+- [x] Multi Realms
+- [x] Easy to use installer
+- [ ] Register
+- [ ] Login
+- [ ] Start page (Under development)
+- [ ] Multi Language support
+- [ ] Forum
+- [ ] Recruit a friend
+- [ ] Admin panel
+- [ ] Module installer
+- [ ] Profile
+- [ ] Soap and ingame shop
