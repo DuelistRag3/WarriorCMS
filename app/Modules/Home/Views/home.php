@@ -33,7 +33,7 @@
         <div class="body-container">
             Hot Duelist
             <button type="button" class="btn btn-primary">Primary</button>
-            <?= getRealms() ?>
+            <?= $model->getAllRealms() ?>
 
         </div>
 

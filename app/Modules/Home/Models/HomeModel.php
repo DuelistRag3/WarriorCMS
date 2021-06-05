@@ -8,14 +8,14 @@ class HomeModel extends Model
 {
 
   public function __construct() {
-    $db = db_connect();
   }
 
-  function getRealms() {
+  function getAllRealms() {
+    $db = db_connect();
     $realmtable = $db->table('realms');
-    $query = $builder->get();
+    $query = $realmtable->get();
 
-    foreach ($query->getResults() as $row)
+    foreach ($query->getResult() as $row)
     {
       return $row->name;
     }
