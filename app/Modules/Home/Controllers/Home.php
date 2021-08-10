@@ -15,7 +15,8 @@ class Home extends \CodeIgniter\Controller
       $theme = config('default');
       Themes::init($theme)
       ->addCSS('style.css')
-      ->addCSS('home.css');
+      ->addCSS('home.css')
+      ->addCSS('nav.css');
 
       $this->model = model('App\Modules\Home\Models\HomeModel');
     }
